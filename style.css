@@ -1,0 +1,501 @@
+/* ============================================================
+   MEG Theory — Modular Entropic Gravity
+   A clean, scholarly design for theoretical physics
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Code+Pro:wght@400;500&display=swap');
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #FAFAF8;
+  --bg-card: #FFFFFF;
+  --text: #1A1A2E;
+  --text-secondary: #4A4A5A;
+  --accent: #2D5F8A;
+  --accent-hover: #1E4A6E;
+  --gold: #8B6914;
+  --gold-light: #C4A23A;
+  --border: #D4D0C8;
+  --border-light: #E8E5DE;
+  --bg-subtle: #F2F0EB;
+  --serif: 'Cormorant Garamond', 'Georgia', serif;
+  --sans: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --mono: 'Source Code Pro', 'Consolas', monospace;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-top: 2.5em;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-light);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  color: var(--accent);
+}
+
+p {
+  margin-bottom: 1.1em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Header / Navigation --- */
+header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-title:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-title span {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+nav a {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* --- Mobile nav --- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text);
+}
+
+.nav-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 680px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 0.8rem;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* --- Hero (Home page) --- */
+.hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3em;
+}
+
+.hero .subtitle {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* --- Page header (non-home pages) --- */
+.page-header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.page-header h1 {
+  margin-bottom: 0.3em;
+}
+
+.page-header .lead {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* --- Content --- */
+.content {
+  padding: 1rem 0 4rem;
+}
+
+/* --- Highlight box --- */
+.highlight-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 1.8rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+
+.highlight-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Results table --- */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.92rem;
+}
+
+.results-table thead {
+  border-bottom: 2px solid var(--text);
+}
+
+.results-table th {
+  font-family: var(--sans);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.results-table td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+.results-table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+.results-table .quantity {
+  font-weight: 500;
+}
+
+.results-table .value {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  color: var(--accent);
+}
+
+.results-table .accuracy {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* --- Paper list --- */
+.paper-group {
+  margin-bottom: 2.5rem;
+}
+
+.paper-group h3 {
+  margin-bottom: 0.8rem;
+}
+
+.paper-item {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.paper-item:last-child {
+  border-bottom: none;
+}
+
+.paper-title {
+  font-weight: 500;
+  flex: 1;
+}
+
+.paper-id {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.paper-doi {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+
+/* --- Axiom cards --- */
+.axiom-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.3rem 1.6rem;
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+
+.axiom-card .axiom-label {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.axiom-card p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* --- Architecture diagram --- */
+.architecture {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.architecture .arrow-chain {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 2.2;
+}
+
+.architecture .arrow-chain .node {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--bg);
+  font-weight: 500;
+}
+
+.architecture .arrow-chain .arrow {
+  color: var(--gold);
+  margin: 0 0.3rem;
+}
+
+/* --- Footer --- */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.footer-inner a {
+  color: var(--text-secondary);
+}
+
+.footer-inner a:hover {
+  color: var(--accent);
+}
+
+/* --- Equation display --- */
+.equation {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  text-align: center;
+  padding: 1.2rem 0;
+  color: var(--text);
+}
+
+/* --- Domain sections on results page --- */
+.domain-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.domain-section:last-of-type {
+  border-bottom: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 680px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 1.2rem;
+  }
+
+  .header-inner {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .results-table {
+    font-size: 0.85rem;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .paper-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* --- Print --- */
+@media print {
+  header, footer, nav {
+    display: none;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
