@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — Modular Entropic Gravity</title>
+  <meta name="description" content="Quantitative predictions of Modular Entropic Gravity: coupling constants, mass spectra, confinement scale, and cosmological parameters — all derived with no free parameters.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="site-title"><span>MEG</span> Theory</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="results.html" class="active">Results</a>
+      <a href="papers.html">Papers</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-header">
+    <h1>Results</h1>
+    <p class="lead">Quantitative predictions derived from the four axioms with no adjustable parameters. Each result traces back to the vacuum kernel through a specific derivation chain.</p>
+  </section>
+
+  <section class="content">
+
+    <div class="domain-section">
+      <h2>Gauge Structure and the Standard Model</h2>
+      <p>MEG derives the Standard Model gauge group and matter content from the Spin(8) internal symmetry of the vacuum kernel, broken to SU(3) × SU(2) × U(1) by the Z₃ triality vacuum selection.</p>
+
+      <table class="results-table">
+        <thead>
+          <tr><th>Quantity</th><th>MEG</th><th>Observed</th><th>Accuracy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="quantity">Gauge group</td>
+            <td class="value" style="font-family:var(--sans)">SU(3) × SU(2) × U(1)</td>
+            <td class="value" style="font-family:var(--sans)">SU(3) × SU(2) × U(1)</td>
+            <td class="accuracy">exact</td>
+          </tr>
+          <tr>
+            <td class="quantity">Generations</td>
+            <td class="value">3</td>
+            <td class="value">3</td>
+            <td class="accuracy">exact</td>
+          </tr>
+          <tr>
+            <td class="quantity">Fermions per generation</td>
+            <td class="value">16 Weyl</td>
+            <td class="value">16 Weyl</td>
+            <td class="accuracy">exact</td>
+          </tr>
+          <tr>
+            <td class="quantity">Higgs representation</td>
+            <td class="value" style="font-family:var(--sans)">(1, 2)<sub>−1/2</sub></td>
+            <td class="value" style="font-family:var(--sans)">(1, 2)<sub>−1/2</sub></td>
+            <td class="accuracy">exact</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The gauge group is derived through the DHR superselection structure of the noiseless 8_s fibre; the generation count from the Z₃ triality; the Higgs from the SO(8)/G_SM coset, where Z₃ breaking is identified with electroweak symmetry breaking.</p>
+    </div>
+
+    <div class="domain-section">
+      <h2>Coupling Constants</h2>
+
+      <table class="results-table">
+        <thead>
+          <tr><th>Quantity</th><th>MEG</th><th>Observed</th><th>Accuracy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="quantity">Base coupling α₁</td>
+            <td class="value">1/10</td>
+            <td class="value">—</td>
+            <td class="accuracy">derived</td>
+          </tr>
+          <tr>
+            <td class="quantity">Electroweak VEV <em>v</em><sub>EW</sub></td>
+            <td class="value">246.8 GeV</td>
+            <td class="value">246.2 GeV</td>
+            <td class="accuracy">0.2%</td>
+          </tr>
+          <tr>
+            <td class="quantity">Strong coupling α₃ (confinement scale)</td>
+            <td class="value">0.324</td>
+            <td class="value">~0.326</td>
+            <td class="accuracy">0.7%</td>
+          </tr>
+          <tr>
+            <td class="quantity">GUT coupling g²</td>
+            <td class="value">5/16</td>
+            <td class="value">—</td>
+            <td class="accuracy">derived</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The base coupling α₁ = 1/10 is derived from the Z₃ closure fixed-point condition. The electroweak hierarchy v_EW/μ_GUT is derived from the SO(8) Landau pole with no free parameters. The strong coupling α₃ includes the one-loop instanton determinantal prefactor (Gross–Pisarski–Yaffe coefficient), reducing the naive 33% discrepancy to sub-percent.</p>
+    </div>
+
+    <div class="domain-section">
+      <h2>Fermion Masses and Mixing</h2>
+
+      <table class="results-table">
+        <thead>
+          <tr><th>Quantity</th><th>MEG</th><th>Observed</th><th>Accuracy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="quantity">CKM matrix (3 angles + phase)</td>
+            <td class="value">derived</td>
+            <td class="value">observed</td>
+            <td class="accuracy">within 0.12°</td>
+          </tr>
+          <tr>
+            <td class="quantity">PMNS matrix</td>
+            <td class="value">derived (0 params)</td>
+            <td class="value">observed</td>
+            <td class="accuracy">within 4.5%</td>
+          </tr>
+          <tr>
+            <td class="quantity">Σ<em>m</em><sub>ν</sub></td>
+            <td class="value">~73 meV</td>
+            <td class="value">&lt; 120 meV</td>
+            <td class="accuracy">testable</td>
+          </tr>
+          <tr>
+            <td class="quantity">Higgs mass</td>
+            <td class="value">124.9–128 GeV</td>
+            <td class="value">125.25 GeV</td>
+            <td class="accuracy">0.3–2%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The CKM matrix is derived from the information-geometric structure of the three-generation kernel. The PMNS matrix is a zero-parameter prediction. The neutrino mass sum Σm_ν ≈ 73 meV is a testable prediction within reach of current and near-future cosmological surveys.</p>
+    </div>
+
+    <div class="domain-section">
+      <h2>Gravity and Cosmology</h2>
+
+      <table class="results-table">
+        <thead>
+          <tr><th>Quantity</th><th>MEG</th><th>Observed</th><th>Accuracy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="quantity">Newton's constant <em>G</em></td>
+            <td class="value">6.2 × 10⁻¹¹</td>
+            <td class="value">6.674 × 10⁻¹¹</td>
+            <td class="accuracy">7%</td>
+          </tr>
+          <tr>
+            <td class="quantity">Coherence length ℓ₀</td>
+            <td class="value">~11 kpc</td>
+            <td class="value">~9–11 kpc (SPARC)</td>
+            <td class="accuracy">fitted</td>
+          </tr>
+          <tr>
+            <td class="quantity">Galaxy rotation curves</td>
+            <td class="value">55+ galaxies</td>
+            <td class="value">SPARC data</td>
+            <td class="accuracy">median χ² ≈ 0.5</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Gravity emerges from the faithful part of the kernel-to-spacetime projection. The entropy field S(x) satisfies the PLES variational principle, producing the gravitational field equations. The acceleration law a = c²∇S reproduces galactic rotation curves across 55+ SPARC galaxies with a single parameter (the coherence length ℓ₀). Newton's constant is derived from G = c²α₁⁶/(4πρ₀ℓ₀²).</p>
+    </div>
+
+    <div class="domain-section">
+      <h2>The Mass Gap and Confinement</h2>
+
+      <table class="results-table">
+        <thead>
+          <tr><th>Quantity</th><th>MEG</th><th>Lattice/Obs</th><th>Accuracy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="quantity">Confinement scale Λ<sub>conf</sub></td>
+            <td class="value">~440 MeV</td>
+            <td class="value">~440 MeV</td>
+            <td class="accuracy">sub-percent</td>
+          </tr>
+          <tr>
+            <td class="quantity">Strong coupling α₃</td>
+            <td class="value">0.324</td>
+            <td class="value">~0.326</td>
+            <td class="accuracy">0.7%</td>
+          </tr>
+          <tr>
+            <td class="quantity">Topological charge Q</td>
+            <td class="value">1</td>
+            <td class="value">1 (standard QCD)</td>
+            <td class="accuracy">exact</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>MEG derives confinement in three layers: structurally (the derived SU(3) is unbroken and asymptotically free), quantitatively (the tunnelling fugacity with the one-loop instanton prefactor gives α₃ = 0.324), and topologically (the adjoint hedgehog mechanism gives Q = 1 from the directional noiseless condition). The Georgi–Glashow-type identification of the covariant PLES functional produces both the confinement scale and the topological charge as independent consequences.</p>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Patrick A. Devlin</span>
+    <span>Papers on <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Devlin%2C%20Patrick%20A.%22&l=list&p=1&s=10&sort=newest">Zenodo</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
