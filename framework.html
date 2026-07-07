@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Modular Entropic Gravity</title>
-  <meta name="description" content="About the MEG programme and its author, Patrick A. Devlin, independent theoretical physicist based in Belfast.">
+  <title>The Framework — Modular Entropic Gravity</title>
+  <meta name="description" content="The vacuum distinguishability kernel, the four axioms, the four-level ontology, and how gravity, gauge fields, and quantum mechanics emerge from the projection.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,52 +17,135 @@
     </button>
     <nav>
       <a href="index.html">Home</a>
-      <a href="framework.html">Framework</a>
+      <a href="framework.html" class="active">Framework</a>
       <a href="results.html">Results</a>
       <a href="papers.html">Papers</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html">About</a>
     </nav>
   </div>
 </header>
 
 <main class="container">
   <section class="page-header">
-    <h1>About</h1>
+    <h1>The Framework</h1>
+    <p class="lead">A vacuum distinguishability kernel, four axioms that are four operations on it, a four-level ontology, and a single projection from which gravity, quantum mechanics, and gauge fields emerge as structurally distinct outputs.</p>
   </section>
 
   <section class="content">
 
-    <h2>The Programme</h2>
+    <h2>The Kernel</h2>
 
-    <p>Modular Entropic Gravity (MEG) is a theoretical physics programme that derives the Standard Model of particle physics and general relativity from a common mathematical foundation: a vacuum distinguishability kernel equipped with four axioms.</p>
+    <p>Modular Entropic Gravity begins with a single mathematical object: the vacuum distinguishability kernel 𝒦(x, y). This bilocal functional quantifies the information-geometric distance between deformations of the vacuum state at two spacetime points. It is identified with the Bogoliubov–Kubo–Mori (BKM) metric on the manifold of vacuum-adjacent states — the Hessian of the Umegaki relative entropy at the vacuum fixed point.</p>
 
-    <p>The framework emerged from years of work on the relationship between entropy, gravity, and quantum information. The decisive breakthrough was the identification of the four axioms and the vacuum kernel itself — the specific mathematical object from which the physics is derived. Once the axioms were in place, the results followed rapidly: the internal consistency of the framework meant that each derivation constrained the next, and the structure of the Standard Model emerged not through parameter-fitting but through the mathematics of the kernel. The approximately 90 papers produced since early 2026 reflect this: the axioms were the hard-won result of years of groundwork, and the derivations are the systematic consequences of getting the foundations right.</p>
+    <p>The kernel is not a field in spacetime. It is a more primitive object — Level 2 in the programme's ontology — from which spacetime fields (the metric, the gauge connection, the matter fields) are derived through projection. The kernel's bilocal structure encodes correlations; its derivative expansion gives the local field-theoretic content; its algebraic infrastructure gives the gauge and matter content.</p>
 
-    <p>The programme's central claim is that gravity, gauge fields, and quantum mechanics are three structural outputs of a single projection — the CPTP map from the vacuum kernel to spacetime observables. The faithful part of this projection produces gravity, the non-faithful part produces the phenomena of quantum mechanics, and the noiseless part produces gauge invariance and the Standard Model gauge group.</p>
+    <h2>The Four Axioms</h2>
 
-    <p>MEG derives the gauge group SU(3) × SU(2) × U(1), the three-generation fermion structure, the coupling constants, and the confinement scale — all with no free parameters. The programme's quantitative predictions include Newton's constant (to 7%), the electroweak VEV (to 0.2%), the colour tunnelling scale (instanton size within a factor of 2–3), the CKM matrix (to 0.12°), and the PMNS matrix (zero-parameter, to 4.5%).</p>
+    <p>The four axioms are not independent postulates. They are four operations on the kernel: Helmholtz inverse, first variation, second variation, and saddle-point completion. The axiom set was derived by identifying the minimal conditions under which the kernel produces the known physics.</p>
 
-    <h2>The Author</h2>
+    <div class="axiom-card">
+      <div class="axiom-label">Axiom 1 — Modular Identification (Helmholtz Inverse)</div>
+      <p>The dimensionless scalar entropy field S(x) is the coarse-grained expectation of the vacuum modular Hamiltonian:</p>
+      <p style="text-align:center; font-style:italic;">S(x) = (1/𝒩) Δ⟨K<sub>σ</sub>(𝒪<sub>x</sub>)⟩</p>
+      <p>From the kernel perspective, this is the Helmholtz inverse — the dominant local coordinate of the kernel, obtained by projecting the bilocal 𝒦(x, y) onto its leading eigenmode in the coarse-grained limit. S(x) is the bridge between the kernel's non-local distinguishability data and the local fields of spacetime physics.</p>
+    </div>
 
-    <p>Patrick A. Devlin is an independent theoretical physicist based in Belfast, Northern Ireland. He works without institutional affiliation on the MEG programme.</p>
+    <div class="axiom-card">
+      <div class="axiom-label">Axiom 2 — Modular Response (First Variation)</div>
+      <p>Perturbations of the entropy field satisfy the JLMS thermodynamic response identity:</p>
+      <p style="text-align:center; font-style:italic;">δ⟨K<sub>ℛ</sub>⟩ = β<sub>ℛ</sub> δ⟨H<sub>ℛ</sub>⟩</p>
+      <p>with effective inverse temperature β<sub>eff</sub> = 2πL<sub>norm</sub>/(ℏc) in the coarse-grained weak-field limit. From the kernel perspective, this is the first variation of the Umegaki relative entropy whose Hessian is the kernel itself. This axiom ensures the kernel respects the monotonicity of relative entropy under coarse-graining — distinguishability can only decrease as the description becomes coarser.</p>
+    </div>
 
-    <h2>Contact</h2>
+    <div class="axiom-card">
+      <div class="axiom-label">Axiom 3 — Principle of Least Entropic Stress (Second Variation)</div>
+      <p>In the quasi-static regime, S(x) minimises the PLES functional:</p>
+      <p style="text-align:center; font-style:italic;">ℐ[S] = ½ ∫ d³x [K(x)|∇S|² + ℓ₀⁻² S²]</p>
+      <p>From the kernel perspective, this is the second variation — the local quasi-static expansion of the kernel as a quadratic functional, valid in the regime where the derivative expansion converges. The PLES functional produces the gravitational field equations: spacetime curvature, geodesic motion, and the Einstein equations emerge as the variational conditions on the projected entropy field.</p>
+    </div>
 
-    <p>The papers are available on <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Devlin%2C%20Patrick%20A.%22&l=list&p=1&s=10&sort=newest">Zenodo</a>. For correspondence regarding the programme, contact via the Zenodo platform.</p>
+    <div class="axiom-card">
+      <div class="axiom-label">Axiom 4 — Gradient Flow (Saddle-Point Completion)</div>
+      <p>The acceleration of a test body is:</p>
+      <p style="text-align:center; font-style:italic;">a = c² ∇S</p>
+      <p>From the kernel perspective, this is the saddle-point completion: the matter-side equation of the joint variational principle whose field-side equation is Axiom 3. Together, Axioms 3 and 4 form a coupled variational system — the field equation for S(x) and the equation of motion for matter — derived from a single saddle-point principle on the kernel.</p>
+    </div>
 
-    <h2>Frequently Asked Questions</h2>
+    <h2>The Four-Level Ontology</h2>
 
-    <h3>How does MEG relate to string theory?</h3>
-    <p>MEG and string theory address similar questions from different starting points. MEG begins with a vacuum distinguishability kernel and four axioms; string theory begins with extended objects and extra dimensions. The MEG programme has identified a specific connection: the UV completion of the MEG framework corresponds to a Z₃ heterotic E₈ orbifold with c = 15 and three generations. This connection is explored in the <a href="https://doi.org/10.5281/zenodo.20598708">MEG–string theory paper</a>.</p>
+    <p>The programme's objects are organised in four levels. The progression is not a simple hierarchy of derivation — cross-level constraints connect the levels in both directions.</p>
 
-    <h3>Is MEG a theory of everything?</h3>
-    <p>MEG derives gravity and the Standard Model from a common framework, which gives it the scope of a unification programme. Whether it constitutes a "theory of everything" depends on whether the four axioms are themselves derivable from something more fundamental. The programme does not claim to answer that question; it claims that the four axioms, taken as given, produce the observed physics.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Object</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>0</strong></td>
+          <td>Physical vacuum σ₀</td>
+          <td>Constrained by the kernel fixed-point condition. The SO(8)/ℤ₃ broken Higgs vacuum is a solution.</td>
+        </tr>
+        <tr>
+          <td><strong>1</strong></td>
+          <td>Distinguishability functional D(ρ ‖ σ₀)</td>
+          <td>Constrained by modular coupling and cross-level rigidity. Canonical representative: Umegaki relative entropy.</td>
+        </tr>
+        <tr>
+          <td><strong>2</strong></td>
+          <td>Kernel 𝒦(x, y)</td>
+          <td>The deepest currently identified mathematical object. The BKM metric on vacuum-adjacent states. Generates both derivation hierarchies.</td>
+        </tr>
+        <tr>
+          <td><strong>3</strong></td>
+          <td>Operational projections</td>
+          <td>Where physical predictions are made. 3a: vertical (axioms → gravity, QM). 3b: lateral (Haag–Kastler → DHR → gauge–matter).</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <h3>Has MEG been peer reviewed?</h3>
-    <p>The Yang–Mills existence and mass gap paper has been submitted to Foundations of Physics and has passed technical checks. The remaining papers are publicly available as preprints on Zenodo. The programme welcomes scrutiny — the papers contain explicit derivations, and the quantitative predictions are testable.</p>
+    <p>Level 2 is the central level. Everything above it (the parent functional, the vacuum) constrains its form; everything below it (the operational projections) extracts physical content from it. The kernel is the object from which both the vertical hierarchy (gravity, quantum mechanics) and the lateral hierarchy (gauge fields, matter content) are derived.</p>
 
-    <h3>Why Zenodo rather than arXiv?</h3>
-    <p>Zenodo provides DOI assignment, version control, and permanent archival for academic work. The papers are publicly accessible and citable. Once the foundational axioms were identified, the derivations followed rapidly — each result constraining and enabling the next — and Zenodo's immediate-upload model allowed the programme to develop publicly in real time rather than accumulating results behind closed doors.</p>
+    <h2>Three Outputs of One Projection</h2>
+
+    <p>The projection Π from the kernel to spacetime observables is a completely positive, trace-preserving (CPTP) map. Its structure has three components, each producing a different family of physics:</p>
+
+    <h3>Gravity — from the faithful part of Π</h3>
+
+    <p>The scalar entropy field S(x), faithfully represented by the projection, satisfies the PLES variational principle (Axiom 3). This produces the gravitational field equations. The coherence length ℓ₀ — the scale at which the kernel's correlations become significant — sets the gravitational coupling through G = c²α₁⁶/(4πρ₀ℓ₀²). The coherence length is derived from the de Sitter horizon through the s-wave zero-point action: ℓ₀ = R<sub>dS</sub> × e<sup>−(4π+1/2)</sup> ≈ 11 kpc.</p>
+
+    <h3>Quantum mechanics — from the non-faithful part of Π</h3>
+
+    <p>The projection is not faithful: the spacetime description carries less distinguishability than the kernel. The deficit Δ = D<sub>kernel</sub> − D<sub>projected</sub> ≥ 0 produces the characteristic phenomena of quantum mechanics. Interference, black hole thermality, gravitational screening, and the measurement problem are unified as aspects of the projection's non-faithfulness, derived in the Projection Theorem. The Born rule is the unique affine readout consistent with the axioms (Axioms 1 + 4 force the Born rule by a uniqueness theorem).</p>
+
+    <h3>Gauge fields — from the noiseless part of Π</h3>
+
+    <p>The vacuum's ℤ₃ triality structure supports a protected chiral spinor fibre E<sub>x</sub> ≅ 8<sub>s</sub> at each spacetime point. The scalar character of the projection means it commutes with the internal Spin(8) action on this fibre. By Schur's lemma (the fibre is irreducible), the scalar channel acts as the identity on E<sub>x</sub>: the fibre is a noiseless subsystem. Local frame orientations within the fibre are unobservable through the scalar projection, establishing Spin(8) gauge invariance as a derived consequence. The gauge connection is supplied by the DHR superselection transport construction.</p>
+
+    <h2>From Spin(8) to the Standard Model</h2>
+
+    <p>The full internal symmetry group is Spin(8), but the physical gauge group is SU(3) × SU(2) × U(1). The reduction occurs through the ℤ₃ triality vacuum selection: the vacuum selects a specific ℤ₃ subgroup of the Spin(8) triality, which breaks Spin(8) to the Standard Model gauge group. This breaking is not imposed — it is a consequence of the vacuum structure, established through the F₄ fixed-point theorem and Schur's lemma.</p>
+
+    <p>The ℤ₃ structure determines the generation count (n<sub>gen</sub> = 3), the base coupling (α₁ = 1/10 from the ℤ₃ closure fixed point, independently identified as the single-instanton amplitude C₁ = 2/b₀ = 1/10 by the Callan–Dashen–Gross normalisation), and the electroweak hierarchy (ln(μ<sub>GUT</sub>/v<sub>EW</sub>) = 72π²ln3/25 ≈ 31.227, giving v<sub>EW</sub> = 246.8 GeV with no free parameters). The matter content — 16 Weyl fermions per generation in the specific representations under SU(3) × SU(2) × U(1) — follows from the DHR reconstruction of charged fields from the superselection structure.</p>
+
+    <h2>The Arithmetic Face of the Kernel</h2>
+
+    <p>A systematic confrontation with the Riemann zeta function — conducted to stress-test the theory against exact, binary, unfittable arithmetic — revealed that the kernel carries multiplicative-arithmetic structure not anticipated at the theory's founding. The modular flow is a dilation (not a translation), its spectral transform is the Mellin transform, and the integers of quantisation carry prime factorisation structure because the vacuum's modular flow is multiplicative. The structural integers 2 (from Maslov/quadratic PLES) and 3 (from ℤ₃ triality) generate the arithmetic level 12 of the vacuum's phase lattice, with the cyclotomic field ℚ(ζ₁₂) as the vacuum's field of definition. The physical parity of vacuum observables (charge-conjugation parity) matches the arithmetic parity of Dirichlet characters, confirmed 4/4 with parameter-free Gauss sums.</p>
+
+    <h2>Key References</h2>
+
+    <p>The consolidation paper, <a href="https://doi.org/10.5281/zenodo.20750208"><em>The Vacuum Entanglement Kernel as the Common Origin of Physical Law</em></a>, synthesises the programme's results into a single reference with the kernel-first architecture, the four-level ontology, and the axiom-by-axiom derivation chain.</p>
+
+    <p>The noiseless fibre paper, <a href="https://doi.org/10.5281/zenodo.21129828"><em>Scalar Modular Coarse-Graining and the Noiseless 8<sub>s</sub> Fibre</em></a>, derives gauge invariance from the scalar character of the projection.</p>
+
+    <p>The mass gap paper, <a href="https://doi.org/10.5281/zenodo.21141898"><em>The Colour-Sector Mass Gap from the Vacuum Entanglement Kernel</em></a>, predicts the colour tunnelling scale with no free parameters and derives the topological charge of the tunnelling cycle.</p>
+
+    <p>The Hecke/zeta paper, <a href="https://doi.org/10.5281/zenodo.21189431"><em>Archimedean and Hecke Structure in the MEG Modular Flow</em></a>, establishes the arithmetic face of the kernel and the adelic completion conjecture.</p>
+
+    <p>The full paper catalogue is available on the <a href="papers.html">Papers</a> page.</p>
 
   </section>
 </main>
